@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
+  
+#Shows all persons in db
   def index
+    @categories = Category.all
   end
 
   def show
@@ -12,5 +15,10 @@ class CategoriesController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+  def category_params
+    params.require(:category).permit(:name, :thumburl)
   end
 end

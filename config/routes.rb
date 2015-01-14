@@ -4,6 +4,8 @@ EtsyApp::Application.routes.draw do
   get "categories/new"
   get "categories/edit"
   get "categories/delete"
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
