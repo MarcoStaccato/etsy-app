@@ -3,8 +3,11 @@ EtsyApp::Application.routes.draw do
   get "categories/show"
   get "categories/new"
   get "categories/edit"
-  get "categories/delete"
+  #get "categories/delete"
   
+
+  resources :categories
+  get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
