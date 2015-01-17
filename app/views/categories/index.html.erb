@@ -18,7 +18,8 @@
 
                           <span><%= link_to "Edit",  categories_edit_path(category.id) %></span>
 
-                          <span><%= link_to 'Show', categories_show_path(:id => category.id) %></span>
+                          <span><%= link_to 'Show', category %></span>
+
                           <td><%= link_to 'Delete', categories_delete_path(:id => category.id) %></td>
                         </div>
                       </div>
