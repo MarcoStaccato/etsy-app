@@ -13,4 +13,8 @@ class ProductsController < ApplicationController
 
   def delete
   end
+
+  def product_params
+    params.require(:product).permit(:product_name, :description, :price, :thumburl)
+  end
 end
