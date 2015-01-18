@@ -27,8 +27,8 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.find([:id])
-    if @category.update_attribute(category_params)
+    @category = Category.find(params[:id])
+    if @category.update_attributes(category_params)
       redirect_to(:action =>'show', :id => @category.id)
     else
       render ('index')
@@ -36,7 +36,14 @@ class CategoriesController < ApplicationController
   end
 
   def delete
+    @category = Category.find(params[:id])
   end
+
+  def destroy
+    @category = Category.find(params[:id]).destroy
+    redirect_to(:action => 'index')
+  end
+
 
   private
   def category_params
